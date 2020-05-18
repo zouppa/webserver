@@ -38,11 +38,11 @@ pipeline {
 
     stage('container') {
       steps {
-        sh 'docker run -d -p 80:80 zouppa/webserver'
+        sh 'docker run --publish 80:80 --detach --name bb zouppa/webserver'
       }
     }
 
-    stage('') {
+    stage('error') {
       steps {
         echo 'end'
       }
