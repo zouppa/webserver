@@ -48,5 +48,11 @@ pipeline {
       }
     }
 
+    stage('Push container') {
+      steps {
+        sh 'docker push zouppa/webserver'
+      }
+    }
+
   }
 }
