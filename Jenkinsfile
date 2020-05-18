@@ -24,9 +24,27 @@ pipeline {
       }
     }
 
-    stage('error') {
+    stage('message') {
       steps {
         echo 'Ready '
+      }
+    }
+
+    stage('image') {
+      steps {
+        sh 'docker build -t zouppa/webserver .'
+      }
+    }
+
+    stage('container') {
+      steps {
+        sh 'docker run -d -p 80:80 zouppa/webserver'
+      }
+    }
+
+    stage('') {
+      steps {
+        echo 'end'
       }
     }
 
