@@ -38,7 +38,7 @@ pipeline {
 
     stage('container') {
       steps {
-        sh 'docker run --publish 80:80 --detach --name bb zouppa/webserver'
+        sh 'docker run --publish 80:80 --detach zouppa/webserver'
       }
     }
 
