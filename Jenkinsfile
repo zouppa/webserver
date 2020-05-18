@@ -38,7 +38,7 @@ pipeline {
 
     stage('container') {
       steps {
-        sh 'docker run --publish 80:80 --detach zouppa/webserver'
+        sh 'docker run --publish 80:80 zouppa/webserver'
       }
     }
 
@@ -50,7 +50,7 @@ pipeline {
 
     stage('Push container') {
       steps {
-        sh 'docker push zouppa/webserver'
+        sh 'docker pushÂ zouppa/webserver'
       }
     }
 
