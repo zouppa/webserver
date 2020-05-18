@@ -21,18 +21,12 @@ pipeline {
           }
         }
 
-        stage('') {
-          steps {
-            echo 'staring CI'
-          }
-        }
-
       }
     }
 
-    stage('') {
+    stage('error') {
       steps {
-        echo 'done'
+        echo 'Ready '
       }
     }
 
