@@ -42,7 +42,7 @@ pipeline {
       }
     }
 
-    stage('error') {
+    stage('ready') {
       steps {
         echo 'end'
       }
